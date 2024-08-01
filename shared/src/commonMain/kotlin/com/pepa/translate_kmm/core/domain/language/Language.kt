@@ -35,7 +35,7 @@ enum class Language(
 
     companion object {
         fun byCode(code: String): Language {
-            return values().find { it.langCode == code }
+            return entries.find { it.langCode == code }
                 ?: throw IllegalArgumentException("Invalid or unsupported language code")
         }
     }
